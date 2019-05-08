@@ -9,7 +9,7 @@ const menuList = [
     children: [
       {
         title: '按钮',
-        key: '/admin/ui/buttons',
+        key: '/ui/buttons',
       },
       {
         title: '弹框',
