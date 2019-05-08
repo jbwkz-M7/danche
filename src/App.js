@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>项目启动</div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    )
+  }
 }
 
 export default App;
