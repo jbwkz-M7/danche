@@ -1,3 +1,5 @@
+/** 常用色值 **/
+/** 常用字体大小 **/
 ul,
 li {
   list-style: none;
@@ -15,6 +17,7 @@ li {
 }
 .container .main {
   height: calc(100vh);
+  background-color: #f1f3f5;
   overflow: auto;
 }
 .container .content {

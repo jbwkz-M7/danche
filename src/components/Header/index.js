@@ -35,7 +35,7 @@ export default class Header extends React.Component {
 
   componentWillMount() {
     this.setState({
-      username: "河畔一角"
+      username: "葛梦甜"
     })
     setInterval(() => {
       let sysTime = Util.formateDate(new Date().getTime());
@@ -51,7 +51,7 @@ export default class Header extends React.Component {
     axios.jsonp({
       url: 'http://api.map.baidu.com/telematics/v3/weather?location=' + encodeURIComponent(city) + '&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
     }).then((res) => {
-      if (res.status == 'success') {
+      if (res.status === 'success') {
         let data = res.results[0].weather_data[0];
         this.setState({
           dayPictureUrl: data.dayPictureUrl,
