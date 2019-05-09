@@ -6,6 +6,7 @@ import Admin from './admin'
 import Buttons from './pages/ui/buttons'
 import NoMatch from './pages/nomatch'
 import Home from './pages/home'
+import FormLogin from './pages/form/login'
 
 export default class IRouter extends React.Component {
   render() {
@@ -19,6 +20,7 @@ export default class IRouter extends React.Component {
                   <Switch>
                     <Route path='/home' component={Home} />
                     <Route path="/ui/buttons" component={Buttons} />
+                    <Route path="/form/login" component={FormLogin} />
                     <Redirect to="/home" />
                     {/* <Route component={NoMatch} /> */}
                   </Switch>
