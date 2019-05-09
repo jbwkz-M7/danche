@@ -12,7 +12,7 @@ export default class NavLeft extends React.Component {
       <div className="nav-left">
         <div className="logo">
           <img src="/assets/logo-ant.svg" alt="" />
-          <h1>Imooc MS</h1>
+          <h1>React Demo</h1>
         </div>
         <Menu
           theme="dark"
