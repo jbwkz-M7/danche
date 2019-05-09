@@ -17,12 +17,12 @@ export default class Axios {
     }
 
     static ajax(options){
-        let loading;
-        if (options.data && options.data.isShowLoading !== false){
-            loading = document.getElementById('ajaxLoading');
-            loading.style.display = 'block';
-        }
-        let baseApi = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        // let loading;
+        // if (options.data && options.data.isShowLoading !== false){
+        //     loading = document.getElementById('ajaxLoading');
+        //     loading.style.display = 'block';
+        // }
+        let baseApi = 'https://www.easy-mock.com/mock/5cd421124031143439b76a2a/mockapi';
         return new Promise((resolve,reject)=>{
             axios({
                 url:options.url,
@@ -31,18 +31,23 @@ export default class Axios {
                 timeout:5000,
                 params: (options.data && options.data.params) || ''
             }).then((response)=>{
-                if (options.data && options.data.isShowLoading !== false) {
-                    loading = document.getElementById('ajaxLoading');
-                    loading.style.display = 'none';
-                }
-                if (response.status === '200'){
+                // if (options.data && options.data.isShowLoading !== false) {
+                //     loading = document.getElementById('ajaxLoading');
+                //     loading.style.display = 'none';
+                // }
+                // console.log(response)
+                // console.log(typeof response.status)
+                if (response.status == '200'){
+                    console.log(1)
                     let res = response.data;
-                    if (res.code === '0'){
+                    console.log(res)
+                    if (res.code == '0'){
                         resolve(res);
+
                     }else{
                         Modal.info({
                             title:"提示",
-                            content:res.msg
+                            content:res.message
                         })
                     }
                 }else{
